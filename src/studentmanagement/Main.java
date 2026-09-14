@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+
+    private static final String ADD_STUDENR = "1";
+    private static final String DELETE_STUDENR = "2";
+    private static final String UPDATE_STUDENR = "3";
+    private static final String QUERY_STUDENR = "4";
+    private static final String EXIT_STUDENR = "5";
+
     static void main() {
         Scanner sc = new Scanner(System.in);
         ArrayList<User> users = new ArrayList<>();
@@ -43,11 +50,11 @@ public class Main {
             String choose = sc.next();
 
             switch (choose) {
-                case "1" -> AddStudent(list, sc);
-                case "2" -> DeleteStudent(list, sc);
-                case "3" -> ModifyStudent(list, sc);
-                case "4" -> QueryStudent(list);
-                case "5" -> {
+                case ADD_STUDENR -> AddStudent(list, sc);
+                case DELETE_STUDENR -> DeleteStudent(list, sc);
+                case UPDATE_STUDENR -> ModifyStudent(list, sc);
+                case QUERY_STUDENR -> QueryStudent(list);
+                case EXIT_STUDENR -> {
                     System.out.println("Exit");
                     break loop;
                 }
