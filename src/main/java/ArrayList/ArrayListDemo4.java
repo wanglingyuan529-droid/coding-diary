@@ -6,25 +6,26 @@ import java.util.Scanner;
 public class ArrayListDemo4 {
     static void main() {
         ArrayList<Phone> list = new ArrayList<>();
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
 
-        for (int i = 0; i < 3; i++) {
-            Phone p1 = new Phone();
+            for (int i = 0; i < 3; i++) {
+                Phone p1 = new Phone();
 
-            String b = sc.next();
-            int p = sc.nextInt();
+                String b = sc.next();
+                int p = sc.nextInt();
 
-            p1.setBrand(b);
-            p1.setPrice(p);
+                p1.setBrand(b);
+                p1.setPrice(p);
 
-            list.add(p1);
-        }
+                list.add(p1);
+            }
 
-        ArrayList<Phone> result = index_phone(list);
+            ArrayList<Phone> result = index_phone(list);
 
-        for (int i = 0; i < result.size(); i++) {
-            Phone p = result.get(i);
-            System.out.println(p.getBrand() + "," + p.getPrice());
+            for (int i = 0; i < result.size(); i++) {
+                Phone p = result.get(i);
+                System.out.println(p.getBrand() + "," + p.getPrice());
+            }
         }
     }
 
