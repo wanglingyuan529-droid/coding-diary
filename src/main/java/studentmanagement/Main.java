@@ -12,27 +12,28 @@ public class Main {
     private static final String EXIT_STUDENR = "5";
 
     static void main() {
-        Scanner sc = new Scanner(System.in);
-        ArrayList<User> users = new ArrayList<>();
+        try (Scanner sc = new Scanner(System.in)) {
+            ArrayList<User> users = new ArrayList<>();
 
-        loop: while (true) {
-            System.out.println("欢迎来到学生管理系统");
-            System.out.println("请选择操作1登录 2注册 3忘记密码 4退出");
-            String choose = sc.next();
+            loop: while (true) {
+                System.out.println("欢迎来到学生管理系统");
+                System.out.println("请选择操作1登录 2注册 3忘记密码 4退出");
+                String choose = sc.next();
 
-            switch (choose) {
-                case "1" -> {
-                    if (login(users, sc)) {
-                        manage(sc);
+                switch (choose) {
+                    case "1" -> {
+                        if (login(users, sc)) {
+                            manage(sc);
+                        }
                     }
+                    case "2" -> register(users, sc);
+                    case "3" -> forgetPassword(users, sc);
+                    case "4" -> {
+                        System.out.println("再见");
+                        break loop;
+                    }
+                    default -> System.out.println("输入有误，请重新选择");
                 }
-                case "2" -> register(users, sc);
-                case "3" -> forgetPassword(users, sc);
-                case "4" -> {
-                    System.out.println("再见");
-                    break loop;
-                }
-                default -> System.out.println("输入有误，请重新选择");
             }
         }
     }

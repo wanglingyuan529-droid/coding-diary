@@ -1,7 +1,5 @@
 package oop.polymorphism.a01polymorphismdemo1;
 
-import oop.extend.a04extendsdemo4.AdminStaff;
-
 public class Test {
     static void main() {
         Student s = new Student();

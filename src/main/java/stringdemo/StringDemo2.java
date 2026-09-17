@@ -14,10 +14,11 @@ public class StringDemo2 {
         boolean result2 = s1.equalsIgnoreCase(s2);
         System.out.println(result2);
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("input String:");
-        String str1 = sc.next();
-        String str2 = "abc";
-        System.out.println(str1.equals(str2));
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("input String:");
+            String str1 = sc.next();
+            String str2 = "abc";
+            System.out.println(str1.equals(str2));
+        }
     }
 }
