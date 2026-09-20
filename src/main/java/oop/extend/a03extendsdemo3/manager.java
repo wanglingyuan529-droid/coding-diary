@@ -3,7 +3,7 @@ package oop.extend.a03extendsdemo3;
 public class manager extends people {
     private double bonus;
 
-    public manager() {
+    public manager(double bonus) {
         this.bonus = bonus;
     }
 
