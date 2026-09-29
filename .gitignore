@@ -60,3 +60,6 @@ replay_pid*
 ### Maven ###
 target/
 
+# 运行时生成的用户数据（账号明文存储，不应提交到仓库）
+users.properties
+
