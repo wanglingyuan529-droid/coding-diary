@@ -1,4 +1,4 @@
-package MathapI.a01mathdemo1;
+package myapi.a01mathdemo1;
 
 public class MathDemo1 {
     public static void main(String[] args) {

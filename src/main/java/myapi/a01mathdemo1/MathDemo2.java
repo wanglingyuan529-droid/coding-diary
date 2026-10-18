@@ -1,4 +1,4 @@
-package MathapI.a01mathdemo1;
+package myapi.a01mathdemo1;
 
 import java.util.Scanner;
 
