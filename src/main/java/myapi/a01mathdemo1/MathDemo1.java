@@ -2,7 +2,10 @@ package myapi.a01mathdemo1;
 
 public class MathDemo1 {
     public static void main(String[] args) {
-        System.out.println(isPrime(1333));
+        long start = System.currentTimeMillis();
+        System.out.println("isPrime(133333) = " + isPrime(133333));
+        long end = System.currentTimeMillis();
+        System.out.println("执行时间：" + (end - start) + " ms");
     }
 
 
@@ -17,4 +20,5 @@ public class MathDemo1 {
         }
         return true;
     }
+
 }

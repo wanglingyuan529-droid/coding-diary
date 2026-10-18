@@ -2,10 +2,13 @@ package myapi.a01mathdemo1;
 
 public class MathDemo3 {
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
         System.out.println("水仙花数的个数为：" + Narcissistic_number());
         System.out.println("证明没有两位的自幂数：" + Narcissistic_number_no());
         System.out.println("四位自幂数的个数为：" + Narcissistic_number_4());
         System.out.println("五位自幂数的个数为：" + Narcissistic_number_5());
+        long end = System.currentTimeMillis();
+        System.out.println("执行时间：" + (end - start) + " ms");
     }
 
     public static int Narcissistic_number() {
