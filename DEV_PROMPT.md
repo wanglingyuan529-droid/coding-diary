@@ -6,12 +6,12 @@
 
 - **项目根目录**：`C:\study\java\coding-diary`
 - **技术栈**：纯 JDK + Swing，Maven 项目，JDK 25，源码编码 UTF-8，**不引入任何第三方依赖**
-- **源码结构**（都在 `src\main\java\SlideCraft\` 下）：
+- **源码结构**（都在 `src\main\java\slidecraft\` 下）：
   - `APP.java` —— 程序入口（main 方法）
   - `ui\GameJFrame.java` —— 主游戏窗口（拼图界面，目前最完整）
   - `ui\LoginJFrame.java` —— 登录窗口（目前是空白壳）
   - `ui\RegisterJFrame.java` —— 注册窗口（目前是空白壳）
-- **图片资源**：`src\main\java\SlideCraft\异环娜娜莉\images\异环娜娜莉_01.png` ~ `_09.png`，共 9 张
+- **图片资源**：`src\main\java\slidecraft\nanali\images\异环娜娜莉_01.png` ~ `_09.png`，共 9 张
 - **已知图片信息**：9 张图是独立小图（**不是**一张大图切的 9 块），实际分辨率约 83×112 的竖图、非正方形，且每张略有差异
 - **窗口设定**：窗口 603×680，3×3 拼图网格，每格 105×105，图片已按比例缩放居中显示（GameJFrame 里有 `scaleIcon` 方法）
 
@@ -37,5 +37,5 @@
 
 - 保持现有代码风格：中文注释、方法命名风格（如 `initXxx`）尽量延续
 - 图片路径继续用绝对路径（`C:\study\java\...`）即可
-- 每次改完用 `javac -encoding UTF-8 -d target\classes src\main\java\SlideCraft\APP.java src\main\java\SlideCraft\ui\*.java` 编译验证，报错要给完整修复方案
+- 每次改完用 `javac -encoding UTF-8 -d target\classes src\main\java\slidecraft\APP.java src\main\java\slidecraft\ui\*.java` 编译验证，报错要给完整修复方案
 - 改动后简要说明：改了哪些文件、每个文件做了什么、如何运行验证
