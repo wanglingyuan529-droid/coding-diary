@@ -2,7 +2,7 @@ package myapi.a04bigintegerdemo4;
 
 import java.math.BigInteger;
 
-public class BigIntegerdemo {
+public class BigIntegerDemo {
     public static void main(String[] args) {
         BigInteger a = new BigInteger("1234567890123456789012345678901234567890");
         BigInteger b = new BigInteger("9876543210987654321098765432109876543210");

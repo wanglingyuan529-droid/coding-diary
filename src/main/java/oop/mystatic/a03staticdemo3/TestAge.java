@@ -21,7 +21,7 @@ public class TestAge {
                 list.add(s1);
             }
 
-            System.out.println("年龄最大的学生是:" + Max_ageUitl.maxAge(list) + "岁");
+            System.out.println("年龄最大的学生是:" + MaxAgeUtil.maxAge(list) + "岁");
         }
     }
 

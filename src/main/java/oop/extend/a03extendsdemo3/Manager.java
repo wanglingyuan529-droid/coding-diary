@@ -1,13 +1,13 @@
 package oop.extend.a03extendsdemo3;
 
-public class manager extends people {
+public class Manager extends People {
     private double bonus;
 
-    public manager(double bonus) {
+    public Manager(double bonus) {
         this.bonus = bonus;
     }
 
-    public manager(String id, String name, int salary, double bonus) {
+    public Manager(String id, String name, int salary, double bonus) {
         super(id, name, salary);
         this.bonus = bonus;
     }

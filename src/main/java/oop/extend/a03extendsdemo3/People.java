@@ -1,6 +1,6 @@
 package oop.extend.a03extendsdemo3;
 
-public class people {
+public class People {
     private String id;
     private String name;
     private int salary;
@@ -29,13 +29,13 @@ public class people {
         this.salary = salary;
     }
 
-    public people(String id, String name, int salary) {
+    public People(String id, String name, int salary) {
         this.id = id;
         this.name = name;
         this.salary = salary;
     }
 
-    public people() {
+    public People() {
     }
 
     public void work() {

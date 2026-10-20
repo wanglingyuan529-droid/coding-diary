@@ -155,7 +155,7 @@ public class GameJFrame extends JFrame implements MouseListener, KeyListener, Ac
     // =============================================================
     private void initImages() {
         for (int n = 1; n <= 8; n++) {  // 只加载 1~8，第 9 格是空白
-            String path = IMG_DIR + String.format("异环娜娜莉_%02d.png", n);
+            String path = IMG_DIR + String.format("nanali_%02d.png", n);
             icons[n] = scaleIcon(new ImageIcon(path), SIZE, SIZE);
         }
         // 索引 0 留 null，对应"空格"

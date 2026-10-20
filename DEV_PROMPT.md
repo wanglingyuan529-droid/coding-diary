@@ -7,17 +7,17 @@
 - **项目根目录**：`C:\study\java\coding-diary`
 - **技术栈**：纯 JDK + Swing，Maven 项目，JDK 25，源码编码 UTF-8，**不引入任何第三方依赖**
 - **源码结构**（都在 `src\main\java\slidecraft\` 下）：
-  - `APP.java` —— 程序入口（main 方法）
+  - `App.java` —— 程序入口（main 方法）
   - `ui\GameJFrame.java` —— 主游戏窗口（拼图界面，目前最完整）
   - `ui\LoginJFrame.java` —— 登录窗口（目前是空白壳）
   - `ui\RegisterJFrame.java` —— 注册窗口（目前是空白壳）
-- **图片资源**：`src\main\java\slidecraft\nanali\images\异环娜娜莉_01.png` ~ `_09.png`，共 9 张
+- **图片资源**：`src\main\java\slidecraft\nanali\images\nanali_01.png` ~ `_09.png`，共 9 张
 - **已知图片信息**：9 张图是独立小图（**不是**一张大图切的 9 块），实际分辨率约 83×112 的竖图、非正方形，且每张略有差异
 - **窗口设定**：窗口 603×680，3×3 拼图网格，每格 105×105，图片已按比例缩放居中显示（GameJFrame 里有 `scaleIcon` 方法）
 
 ## 二、当前已知问题（第 0 步：先修这个）
 
-1. **界面空白问题**：运行 `APP.java` 会**同时打开 3 个窗口**（登录、拼图、注册，互相遮挡，注册窗口最后创建在最上面），用户看到的"空白界面"很可能就是空白的注册/登录窗口。请处理：让程序只按需显示窗口，或明确窗口之间的显示逻辑。
+1. **界面空白问题**：运行 `App.java` 会**同时打开 3 个窗口**（登录、拼图、注册，互相遮挡，注册窗口最后创建在最上面），用户看到的"空白界面"很可能就是空白的注册/登录窗口。请处理：让程序只按需显示窗口，或明确窗口之间的显示逻辑。
 2. **布局隐患**：`GameJFrame` 里 `this.setLayout(null)` 设置的是 JFrame 自身的布局，而组件是加在 `getContentPane()` 上的（它默认是 BorderLayout）。请确认图片能正常显示在指定坐标，必要时改成 `this.getContentPane().setLayout(null)`。
 3. 修复后请**截图自查**：运行程序、截图、用你的读图能力确认拼图界面和 9 张图都正常显示，再进入下一步。
 
@@ -37,5 +37,5 @@
 
 - 保持现有代码风格：中文注释、方法命名风格（如 `initXxx`）尽量延续
 - 图片路径继续用绝对路径（`C:\study\java\...`）即可
-- 每次改完用 `javac -encoding UTF-8 -d target\classes src\main\java\slidecraft\APP.java src\main\java\slidecraft\ui\*.java` 编译验证，报错要给完整修复方案
+- 每次改完用 `javac -encoding UTF-8 -d target\classes src\main\java\slidecraft\App.java src\main\java\slidecraft\ui\*.java` 编译验证，报错要给完整修复方案
 - 改动后简要说明：改了哪些文件、每个文件做了什么、如何运行验证

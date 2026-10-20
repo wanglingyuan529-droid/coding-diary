@@ -2,8 +2,8 @@ package oop.mystatic.a03staticdemo3;
 
 import java.util.ArrayList;
 
-public class Max_ageUitl {
-    private Max_ageUitl() {
+public class MaxAgeUtil {
+    private MaxAgeUtil() {
 
     }
 

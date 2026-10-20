@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  * 1. String 自带的方法：matches / replaceAll / split（简单活）
  * 2. Pattern + Matcher（要提取内容、要反复用时用）
  */
-public class RegularExpressiondemo {
+public class RegularExpressionDemo {
     public static void main(String[] args) {
         System.out.println("===== ① 判断：这段文字符不符合规则 =====");
         System.out.println("13812345678 是手机号吗: " + "13812345678".matches("^1[3-9]\\d{9}$"));
