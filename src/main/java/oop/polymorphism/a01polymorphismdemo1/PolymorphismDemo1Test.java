@@ -1,6 +1,6 @@
 package oop.polymorphism.a01polymorphismdemo1;
 
-public class Test {
+public class PolymorphismDemo1Test {
     static void main() {
         Student s = new Student();
         s.setName("zhangsan");

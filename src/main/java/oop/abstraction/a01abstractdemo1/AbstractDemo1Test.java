@@ -1,6 +1,6 @@
 package oop.abstraction.a01abstractdemo1;
 
-public class Test {
+public class AbstractDemo1Test {
     static void main() {
         Frog f = new Frog();
         f.setName("青蛙");

@@ -1,6 +1,6 @@
 package oop.inner.a01innerclassdemo1;
 
-public class Test {
+public class InnerClassDemo1Test {
     public static void main(String[] args) {
         Car c = new Car();
         c.carName = "宝马";

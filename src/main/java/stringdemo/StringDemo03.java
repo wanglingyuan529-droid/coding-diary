@@ -2,7 +2,7 @@ package stringdemo;
 
 import java.util.Scanner;
 
-public class StringDemo3 {
+public class StringDemo03 {
     static void main() {
         String user_name = "yuan";
         String user_pass = "123456";

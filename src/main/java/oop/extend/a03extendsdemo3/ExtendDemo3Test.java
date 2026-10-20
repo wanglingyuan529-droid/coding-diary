@@ -1,6 +1,6 @@
 package oop.extend.a03extendsdemo3;
 
-public class Test {
+public class ExtendDemo3Test {
     static void main() {
         Manager m = new Manager("001", "manager", 10000, 800);
         System.out.println(m.getId() + ", " + m.getName() + ", " + m.getSalary() + ", " + m.getBonus());

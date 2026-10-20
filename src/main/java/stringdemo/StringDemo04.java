@@ -2,7 +2,7 @@ package stringdemo;
 
 import java.util.Scanner;
 
-public class StringDemo4 {
+public class StringDemo04 {
     static void main() {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.println("input_String:");

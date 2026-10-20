@@ -1,6 +1,6 @@
 package oop.extend.a02extendsdemo2;
 
-public class Test {
+public class ExtendDemo2Test {
     static void main() {
         Husky hs = new Husky();
         hs.eat();

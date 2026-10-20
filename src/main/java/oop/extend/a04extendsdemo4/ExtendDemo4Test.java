@@ -1,6 +1,6 @@
 package oop.extend.a04extendsdemo4;
 
-public class Test {
+public class ExtendDemo4Test {
     static void main() {
         Employee[] employees = {
             new Lecturer("E001", "张三", "讲课"),

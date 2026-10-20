@@ -1,6 +1,6 @@
 package oop.extend.a01extendsdemo1;
 
-public class Test {
+public class ExtendDemo1Test {
     static void main() {
         Ragdoll rd = new Ragdoll();
         rd.eat();

@@ -1,6 +1,6 @@
 package oop.polymorphism.a02polymorphismdemo2;
 
-public class Test {
+public class PolymorphismDemo2Test {
     static void main() {
         Person laoWang = new Person("老王", 30);
         Dog dog = new Dog(2, "黑");

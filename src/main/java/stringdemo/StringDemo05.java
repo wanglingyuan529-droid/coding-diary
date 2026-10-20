@@ -1,7 +1,7 @@
 package stringdemo;
 import java.util.Scanner;
 
-public class StringDemo5 {
+public class StringDemo05 {
     static void main() {
         try (Scanner sc = new Scanner(System.in)) {
 

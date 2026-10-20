@@ -2,7 +2,7 @@ package stringdemo;
 
 import java.util.Scanner;
 
-public class StringDemo7 {
+public class StringDemo07 {
     static void main() {
         try (Scanner sc = new Scanner(System.in)) {
             String id = sc.next();

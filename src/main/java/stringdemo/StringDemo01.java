@@ -1,6 +1,6 @@
 package stringdemo;
 
-public class StringDemo1 {
+public class StringDemo01 {
     static void main() {
         String s1 = "abc";
         System.out.println(s1);

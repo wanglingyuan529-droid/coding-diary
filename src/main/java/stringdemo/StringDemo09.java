@@ -2,7 +2,7 @@ package stringdemo;
 
 import java.util.Scanner;
 
-public class StringDemo9 {
+public class StringDemo09 {
     static void main() {
         try (Scanner sc = new Scanner(System.in)) {
             String str = sc.next();

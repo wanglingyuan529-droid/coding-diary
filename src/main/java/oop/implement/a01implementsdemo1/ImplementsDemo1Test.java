@@ -1,6 +1,6 @@
 package oop.implement.a01implementsdemo1;
 
-public class Test {
+public class ImplementsDemo1Test {
     public static void main(String[] args) {
         Frog frog = new Frog("小青蛙", 2);
         System.out.println(frog.getName() + "," + frog.getAge());

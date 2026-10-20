@@ -1,6 +1,6 @@
 package oop.inner.a03innerclassdemo3;
 
-public class Test implements Swim {
+public class InnerClassDemo3Test implements Swim {
 
     public static void main(String[] args) {
         new Swim() {

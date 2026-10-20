@@ -1,6 +1,6 @@
 package oop.implement.a02implementsdemo2;
 
-public class Test {
+public class ImplementsDemo2Test {
     public static void main(String[] args) {
         TableTennisPlayer tableTennisPlayer = new TableTennisPlayer("马龙", 35);
         System.out.println(tableTennisPlayer.getName() + "," + tableTennisPlayer.getAge());

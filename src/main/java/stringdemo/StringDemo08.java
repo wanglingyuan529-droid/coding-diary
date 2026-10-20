@@ -1,6 +1,6 @@
 package stringdemo;
 
-public class StringDemo8 {
+public class StringDemo08 {
     static void main() {
         StringBuilder sb = new StringBuilder("abc");
         sb.append(1).append(2.3).append(true);
