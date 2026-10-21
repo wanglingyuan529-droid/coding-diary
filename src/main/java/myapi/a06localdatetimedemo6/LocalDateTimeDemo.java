@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-public class loacaldatetimedemo {
+public class LocalDateTimeDemo {
     public static void main(String[] args) {
         LocalDate d = LocalDate.of(2026, 10, 20);
         LocalDate today = LocalDate.now();

@@ -1,4 +1,4 @@
-package myapi.DemoTest;
+package myapi.demotest;
 
 public class Test2 {
     public static void main(String[] args) {
