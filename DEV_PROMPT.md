@@ -11,7 +11,7 @@
   - `ui\GameJFrame.java` —— 主游戏窗口（拼图界面，目前最完整）
   - `ui\LoginJFrame.java` —— 登录窗口（目前是空白壳）
   - `ui\RegisterJFrame.java` —— 注册窗口（目前是空白壳）
-- **图片资源**：`src\main\java\slidecraft\nanali\images\nanali_01.png` ~ `_09.png`，共 9 张
+- **图片资源**：`src\main\resources\nanali\images\nanali_01.png` ~ `_09.png`，共 9 张（由 `GameJFrame` 通过 `getResource("/nanali/images/...")` 从 classpath 加载）
 - **已知图片信息**：9 张图是独立小图（**不是**一张大图切的 9 块），实际分辨率约 83×112 的竖图、非正方形，且每张略有差异
 - **窗口设定**：窗口 603×680，3×3 拼图网格，每格 105×105，图片已按比例缩放居中显示（GameJFrame 里有 `scaleIcon` 方法）
 
@@ -36,6 +36,6 @@
 ## 四、开发规范
 
 - 保持现有代码风格：中文注释、方法命名风格（如 `initXxx`）尽量延续
-- 图片路径继续用绝对路径（`C:\study\java\...`）即可
-- 每次改完用 `javac -encoding UTF-8 -d target\classes src\main\java\slidecraft\App.java src\main\java\slidecraft\ui\*.java` 编译验证，报错要给完整修复方案
+- 图片资源走 classpath（`src\main\resources\` → `/nanali/images/`），**不要**改回绝对路径或依赖当前工作目录
+- 每次改完用 `javac -encoding UTF-8 -d target\classes src\main\java\slidecraft\App.java src\main\java\slidecraft\ui\*.java` 编译验证，报错要给完整修复方案；手工运行前需把 `src\main\resources\*` 复制进输出目录（用 `mvn compile` 会自动处理）
 - 改动后简要说明：改了哪些文件、每个文件做了什么、如何运行验证

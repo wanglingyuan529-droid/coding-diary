@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -45,8 +46,8 @@ public class GameJFrame extends JFrame implements MouseListener, KeyListener, Ac
     private static final int COLS = 3;
     private static final int ROWS = 3;
     private static final int IMG_COUNT = ROWS * COLS;       // 9
-    private static final String IMG_DIR =
-            "C:\\study\\java\\coding-diary\\src\\main\\java\\slidecraft\\nanali\\images\\";
+    /** 图片资源在 classpath 中的位置（对应 src/main/resources/nanali/images/） */
+    private static final String IMG_DIR = "/nanali/images/";
 
     // ============ 状态 ============
     /** 9 个格子的图片编号；data[i] 表示"位置 i 上的图片编号"，0 为空 */
@@ -156,7 +157,13 @@ public class GameJFrame extends JFrame implements MouseListener, KeyListener, Ac
     private void initImages() {
         for (int n = 1; n <= 8; n++) {  // 只加载 1~8，第 9 格是空白
             String path = IMG_DIR + String.format("nanali_%02d.png", n);
-            icons[n] = scaleIcon(new ImageIcon(path), SIZE, SIZE);
+            // 从 classpath 读，不依赖工作目录或绝对路径
+            URL url = GameJFrame.class.getResource(path);
+            if (url == null) {
+                System.err.println("[警告] 缺少图片资源: " + path + "（检查 src/main/resources 是否已在 classpath 中）");
+                continue;   // icons[n] 保持 null，paintPuzzle 里会按空格处理
+            }
+            icons[n] = scaleIcon(new ImageIcon(url), SIZE, SIZE);
         }
         // 索引 0 留 null，对应"空格"
         icons[0] = null;
@@ -264,7 +271,7 @@ public class GameJFrame extends JFrame implements MouseListener, KeyListener, Ac
             cell.putClientProperty("idx", i);
             cell.addMouseListener(this);
 
-            if (imgNo != 0) {
+            if (imgNo != 0 && icons[imgNo] != null) {
                 // 缩放后的图可能小于格子，居中
                 ImageIcon icon = icons[imgNo];
                 int x = (SIZE - icon.getIconWidth()) / 2;

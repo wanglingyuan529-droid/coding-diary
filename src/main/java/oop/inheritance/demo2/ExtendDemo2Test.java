@@ -1,0 +1,21 @@
+package oop.inheritance.demo2;
+
+public class ExtendDemo2Test {
+    static void main() {
+        Husky hs = new Husky();
+        hs.eat();
+        hs.drink();
+        hs.home();
+        hs.wreckingHouse();
+        System.out.println("-------------");
+        SharPei sp = new SharPei();
+        sp.eat();
+        sp.drink();
+        sp.home();
+        System.out.println("-------------");
+        ChineseRuralDog crl = new ChineseRuralDog();
+        crl.eat();
+        crl.drink();
+        crl.home();
+    }
+}
