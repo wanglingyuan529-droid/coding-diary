@@ -1,4 +1,4 @@
-package javaadvancedcollections.collection;
+package collections;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,7 +6,7 @@ import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.List;
 
-public class collectiondemo {
+public class CollectionDemo {
     public static void main(String[] args) {
         // 用Collection接住ArrayList
         Collection<String> c = new ArrayList<>();
